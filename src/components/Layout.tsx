@@ -27,6 +27,18 @@ export default function Layout() {
             Rust <em>for</em> Frontend
           </span>
         </Link>
+        <div className="topbar-progress" title={`已完成 ${completed.size}/${chapters.length}`}>
+          <div className="topbar-progress-bar" style={{ width: `${pct}%` }} />
+          <span className="topbar-progress-label">{pct}%</span>
+        </div>
+        <a
+          className="topbar-link"
+          href="https://play.rust-lang.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Rust Playground ↗
+        </a>
         <div className="topbar-social">
           <a
             className="social-link"
@@ -59,18 +71,6 @@ export default function Layout() {
             </svg>
           </a>
         </div>
-        <div className="topbar-progress" title={`已完成 ${completed.size}/${chapters.length}`}>
-          <div className="topbar-progress-bar" style={{ width: `${pct}%` }} />
-          <span className="topbar-progress-label">{pct}%</span>
-        </div>
-        <a
-          className="topbar-link"
-          href="https://play.rust-lang.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Rust Playground ↗
-        </a>
       </header>
 
       <div className="body">
