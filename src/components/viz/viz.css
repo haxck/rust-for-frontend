@@ -1,0 +1,148 @@
+/* 共享的可视化样式 */
+.viz {
+  font-family: var(--font-sans);
+}
+
+/* 步进控制器 */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.stepper-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-3);
+  border: 1px solid var(--line-strong);
+  color: var(--fg-1);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.stepper-btn:hover:not(:disabled) {
+  background: var(--rust-soft);
+  border-color: var(--rust-deep);
+  color: var(--rust);
+}
+.stepper-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.stepper-btn.primary {
+  background: var(--rust-soft);
+  border-color: var(--rust-deep);
+  color: var(--rust);
+  font-weight: 600;
+}
+.stepper-dots {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+.stepper-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg-hover);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+.stepper-dot.active {
+  background: var(--rust);
+  transform: scale(1.25);
+}
+.stepper-dot.passed { background: var(--rust-deep); }
+
+.viz-caption-line {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--rust);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--fg-1);
+  min-height: 1.5em;
+}
+.viz-caption-line code {
+  font-family: var(--font-mono);
+  color: var(--rust);
+  font-size: 0.88em;
+}
+
+/* SVG 内通用文本 */
+.viz svg text {
+  font-family: var(--font-mono);
+}
+
+/* 内存格子 */
+.mem-legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--fg-2);
+}
+.mem-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.mem-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* 借用场景切换 */
+.scenario-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.scenario-tab {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--fg-2);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+}
+.scenario-tab:hover { background: var(--bg-hover); }
+.scenario-tab.active {
+  border-color: var(--rust-deep);
+  background: var(--rust-soft);
+  color: var(--rust);
+  font-weight: 600;
+}
+.scenario-verdict {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.scenario-verdict.ok {
+  background: var(--ok-soft);
+  border: 1px solid rgba(90, 209, 154, 0.4);
+  color: var(--fg-0);
+}
+.scenario-verdict.err {
+  background: var(--err-soft);
+  border: 1px solid rgba(239, 111, 111, 0.4);
+  color: var(--fg-0);
+}

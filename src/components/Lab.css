@@ -1,0 +1,149 @@
+/* ---------- ErrorDrill ---------- */
+.drill {
+  margin: 1.8rem 0;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--info);
+  border-radius: var(--radius);
+  background: var(--bg-1);
+  padding: 16px 18px;
+}
+.drill-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.drill-badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--info-soft);
+  color: var(--info);
+  padding: 2px 9px;
+  border-radius: 99px;
+}
+.drill-title {
+  font-weight: 600;
+  color: var(--fg-0);
+}
+.drill-error {
+  margin: 0 0 2px;
+  background: #1a1015;
+  border: 1px solid rgba(239, 111, 111, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+.drill-error-tag {
+  display: inline-block;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--err);
+  margin-bottom: 4px;
+}
+.drill-error pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #f0b8b8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ---------- MicroLab ---------- */
+.lab {
+  margin: 1.8rem 0;
+  border: 1px solid var(--rust-deep);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(500px 200px at 100% 0%, rgba(222, 165, 132, 0.06), transparent),
+    var(--bg-1);
+  padding: 16px 18px 18px;
+}
+.lab-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.lab-badge {
+  flex-shrink: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: var(--rust-soft);
+  color: var(--rust);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.lab-title {
+  font-weight: 700;
+  color: var(--fg-0);
+  font-size: 1.02rem;
+}
+.lab-mins {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  color: var(--fg-3);
+}
+.lab-goal {
+  font-size: 0.94rem;
+  color: var(--fg-1);
+  margin-bottom: 6px;
+}
+.lab-goal p:first-child { margin-top: 0; }
+.lab-goal p:last-child { margin-bottom: 0; }
+.lab-goal code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+  color: var(--rust);
+}
+
+.lab-tools {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.lab-toggle {
+  font-size: 0.82rem;
+  color: var(--fg-1);
+  background: var(--bg-3);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.lab-toggle:hover {
+  background: var(--bg-hover);
+  border-color: var(--rust-deep);
+}
+.lab-toggle.open {
+  background: var(--rust-soft);
+  border-color: var(--rust-deep);
+  color: var(--rust);
+}
+.lab-hint {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--warn-soft);
+  border: 1px solid rgba(242, 179, 71, 0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--fg-1);
+}
+.lab-hint code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  color: var(--warn);
+}
+.lab-solution {
+  margin-top: 8px;
+}
